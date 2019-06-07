@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Alcor;
 use App\Contact;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        return view('contact');
     }
 
     /**
@@ -35,7 +36,34 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contact = $request->all();
+        Contact::create($request->all());
+        if (Alcor::all()->isNotEmpty()) {
+            if(Alcor::all()->last()->mail1){
+                Mail::to(['email' => Alcor::all()->last()->mail1])->send(new ContactAndCommand($request->all()));
+            }        
+
+            if(Alcor::all()->last()->mail2){
+                Mail::to(['email' => Alcor::all()->last()->mail2])->send(new ContactAndCommand($request->all()));
+            }
+
+            if(Alcor::all()->last()->mail3){
+                Mail::to(['email' => Alcor::all()->last()->mail1])->send(new ContactAndCommand($request->all()));
+            }        
+
+            if(Alcor::all()->last()->mail4){
+                Mail::to(['email' => Alcor::all()->last()->mail2])->send(new ContactAndCommand($request->all()));
+            }
+
+            if(Alcor::all()->last()->mail5){
+                Mail::to(['email' => Alcor::all()->last()->mail1])->send(new ContactAndCommand($request->all()));
+            } 
+        }
+               
+        
+        return redirect()->route('contacts.index', [
+
+        ])->with('status', 'Votre message a été envoyer avec succès !!');
     }
 
     /**

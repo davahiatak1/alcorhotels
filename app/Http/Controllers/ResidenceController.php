@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\ChambreHotel;
-use App\Hotel;
+use App\Residence;
 use Illuminate\Http\Request;
 
-class HotelController extends Controller
+class ResidenceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class HotelController extends Controller
      */
     public function index()
     {
-        return view('hotels.index', [
-            'hotels' => Hotel::all(),
-        ]);
+        //
     }
 
     /**
@@ -44,26 +41,21 @@ class HotelController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Hotel  $hotel
+     * @param  \App\Residence  $residence
      * @return \Illuminate\Http\Response
      */
-    public function show(Hotel $hotel)
+    public function show(Residence $residence)
     {
-        $chambres = ChambreHotel::find($hotel);
-
-        return view('hotels.show', [
-            'chambres' => $chambres,
-            'hotel' => $hotel,
-        ]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Hotel  $hotel
+     * @param  \App\Residence  $residence
      * @return \Illuminate\Http\Response
      */
-    public function edit(Hotel $hotel)
+    public function edit(Residence $residence)
     {
         //
     }
@@ -72,10 +64,10 @@ class HotelController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Hotel  $hotel
+     * @param  \App\Residence  $residence
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Hotel $hotel)
+    public function update(Request $request, Residence $residence)
     {
         //
     }
@@ -83,10 +75,10 @@ class HotelController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Hotel  $hotel
+     * @param  \App\Residence  $residence
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Hotel $hotel)
+    public function destroy(Residence $residence)
     {
         //
     }

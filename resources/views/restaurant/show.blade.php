@@ -2,8 +2,8 @@
 
 @section('content')
   <div class="container">
-    <h2>restaurant -> plats</h2>
-
+    {{-- <h2>restaurant -> plats</h2> --}}
+<br>
  <div class="row ">
       {{-- site-section --}}
       <div class="col-lg-7 mb-5">

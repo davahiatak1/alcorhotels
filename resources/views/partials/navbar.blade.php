@@ -11,8 +11,10 @@
                 <li class="nav-item"><a href="{{route('hotels.index')}}" class="nav-link">Hôtels</a></li>
                 <li class="nav-item"><a href="{{route('appartements.index')}}" class="nav-link">Résidences</a></li>
                 <li class="nav-item"><a href="{{route('restaurant.index')}}" class="nav-link">Restaurant</a></li>
-
+                
                 <li class="nav-item"><a href="{{route('posts.index')}}" class="nav-link">Actualités</a></li>
+                <li class="nav-item"><a href="{{route('about.index')}}" class="nav-link">A propos</a></li>
+
                 <li class="nav-item"><a href="{{route('contacts.index')}}" class="nav-link">Contact</a></li>
             </ul>
         </div>

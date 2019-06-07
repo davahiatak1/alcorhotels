@@ -24,6 +24,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/about', 'AboutController@index')->name('about.index');
+
 
 Route::resource('/hotels', 'HotelController');
 
@@ -36,6 +38,7 @@ Route::resource('/appartements', 'ResidenceController');
 Route::prefix('hotels')->group(function () {
     Route::resource('{hotel}/chambres', 'ChambreHotelController');
 });
+
 
 
 Route::get('/restaurant', 'RestaurantController@index')->name('restaurant.index');

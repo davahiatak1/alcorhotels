@@ -12,6 +12,7 @@
                 <li class="nav-item"><a href="services.html" class="nav-link">Résidences</a></li>
                 <li class="nav-item"><a href="{{route('restaurant.index')}}" class="nav-link">Restaurant</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="{{route('about.index')}}" class="nav-link">A propos</a></li>
             </ul>
         </div>
     </div>

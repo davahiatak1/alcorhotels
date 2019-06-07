@@ -23,5 +23,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/about', 'AboutController@index')->name('about.index');
 Route::get('/restaurant', 'RestaurantController@index')->name('restaurant.index');
 Route::get('/restaurant/show/{id}', 'RestaurantController@show')->name('restaurant.show');

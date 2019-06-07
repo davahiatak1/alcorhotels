@@ -29,7 +29,7 @@
                             </div>
                             <div class="text">
                                 <h2 class="heading">{{str_limit($chambre->name, 90)}}</h2>
-                                {!!$chambre->description!!}
+                                {!!str_limit($chambre->description, 255)!!}
                                 <div class="price"><span class="number">{{$chambre->prix}} </span><sub>FCFA/par jour</sub></div>
                                 
                             </div>
@@ -65,16 +65,8 @@
                             </div>
                             <div class="text">
                                 <h2 class="heading">{{str_limit($chambre->name, 90)}}</h2>
-                                {!!$chambre->description!!}
+                                {!!str_limit($chambre->description, 255)!!}
                                 <div class="price"><span class="number">{{$chambre->prix}} </span><sub>FCFA/par jour</sub></div>
-                                {{-- <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub></div>
-                                <ul class="specs">
-                                    <li><strong>Adults:</strong> 1</li>
-                                    <li><strong>Categories:</strong> Single</li>
-                                    <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone</li>
-                                    <li><strong>Size:</strong> 20m<sup>2</sup></li>
-                                    <li><strong>Bed Type:</strong> One bed</li>
-                                </ul> --}}
                             </div>
                         </div>
                     </div>

@@ -24,6 +24,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::resource('/hotels', 'HotelController');
 
 Route::resource('/contacts', 'ContactController');
@@ -31,4 +32,8 @@ Route::resource('/contacts', 'ContactController');
 Route::prefix('hotels')->group(function () {
     Route::resource('{hotel}/chambres', 'ChambreHotelController');
 });
+
+
+Route::get('/restaurant', 'RestaurantController@index')->name('restaurant.index');
+Route::get('/restaurant/show/{id}', 'RestaurantController@show')->name('restaurant.show');
 

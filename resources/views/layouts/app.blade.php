@@ -23,9 +23,14 @@
     <link rel="stylesheet" href="{{asset('css/icomoon.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 <body>
-    
+
     @includeIf('partials.navbar')
-    @includeIf('partials.barner')
+    @if (\Request::is('/'))
+        @includeIf('partials.barner')
+    @else
+        @includeIf('partials.barner2')
+    @endif
+
 
     @yield('content')
 

@@ -22,3 +22,6 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/restaurant', 'RestaurantController@index')->name('restaurant.index');
+Route::get('/restaurant/show/{id}', 'RestaurantController@show')->name('restaurant.show');

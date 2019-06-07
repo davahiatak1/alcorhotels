@@ -19,6 +19,16 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/hotels', 'HotelController');
+
+Route::resource('/contacts', 'ContactController');
+
+Route::prefix('hotels')->group(function () {
+    Route::resource('{hotel}/chambres', 'ChambreHotelController');
+});
+

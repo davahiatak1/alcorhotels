@@ -15,10 +15,12 @@ class CreateChambreHotelsTable extends Migration
     {
         Schema::create('chambre_hotels', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('hotel_id')->unsigned();
-            $table->foreign('hotel_id')->reference('id')->on('hotels')->onDelete('cascade');
+            $table->unsignedBigInteger('hotel_id');
+            $table->foreign('hotel_id')->references('id')->on('hotels')->onDelete('cascade');
             $table->string('name')->nullable();
-            $table->string('description')->nullable();
+            $table->string('image')->nullable();
+            $table->string('prix')->nullable();
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

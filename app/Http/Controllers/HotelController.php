@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ChambreHotel;
 use App\Hotel;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class HotelController extends Controller
      */
     public function index()
     {
-        //
+        return view('hotels.index', [
+            'hotels' => Hotel::all(),
+        ]);
     }
 
     /**
@@ -46,7 +49,12 @@ class HotelController extends Controller
      */
     public function show(Hotel $hotel)
     {
-        //
+        $chambres = ChambreHotel::find($hotel);
+
+        return view('hotels.show', [
+            'chambres' => $chambres,
+            'hotel' => $hotel,
+        ]);
     }
 
     /**

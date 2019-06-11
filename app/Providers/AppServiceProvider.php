@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\About;
 use App\Alcor;
+use App\Blog;
+use App\ChambreHotel;
 use App\Post;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
@@ -33,8 +35,8 @@ class AppServiceProvider extends ServiceProvider
 
         View::share([
             'alcor' => Alcor::all()->last(),
-            'overviewChambres' => ChambreHotel::all()->random()->take(6)->get(),
-            //'overviewChambres' => [],
+            //'overviewChambres' => ChambreHotel::all()->random()->take(6)->get(),
+            'overviewChambres' => [],
 
 
             'about' => About::all()->last(),

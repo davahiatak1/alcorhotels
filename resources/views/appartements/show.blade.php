@@ -2,60 +2,50 @@
 
 @section('content')
 
-
 <div class="site-section bg-light">
     <div class="container">
         <div class="row mt-2">
             <div class="col-md-12">
-
-                <div class="block-3 d-md-flex">
-                    <div class="image" style="background-image: url('{{Voyager::image($hotel->thumbnail('cropped', 'image'))}}'); "></div>
+                <div class="block-34">
+                    <div class="image">
+                        <a href="#"><img src="{{Voyager::image($appartement->thumbnail('detail', 'image'))}}"></a>
+                    </div>
                     <div class="text">
+                        <h2 class="heading">{{str_limit($appartement->name, 90)}}</h2>
+                        <div class="price"><span class="number">{{$appartement->prix}} </span><sup>FCFA/par semaine</sup></div>
+                        <p><a href="#" class="btn btn-primary py-3 px-5 reserve-modal" data-image="{{Voyager::image($appartement->thumbnail('medium', 'image'))}}" data-name="{{$appartement->name}}" data-prix="{{$appartement->prix}}">Rserver</a></p>
+                         {!!$appartement->description!!}
 
-                        <h2 class="heading">{{str_limit($hotel->name, 90)}}</h2>
-
-                        {!! str_limit($hotel->description, 255)!!}
-                        
 
                     </div>
                 </div>
-
-
-            </div>  
+            </div>
         </div>
     </div>
 </div>
-
 
 <div class="site-section bg-light p-0">
     <div class="container">
 
         <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center section-heading">
-                <h2 class="heading">Les salles et chambres de {{$hotel->name}}</h2>
-                <p>Cliquez vous voir plus de description sur une chambre ou la salle de {{$hotel->name}}</p>
+                <h2 class="heading">D'autres appartements disponibles</h2>
+                <p>Le groupe Alcor dispose de plusieurs appartements meublés, clématisés avec connection Internet qui peuvent vous interessez </p>
             </div>
         </div>
 
         <div class="row">
-            @foreach($chambres as $chambre)
+            @foreach($appartements as $appartement)
                 <div class="col-lg-4 mb-5">
                     <div class="block-34">
                         <div class="image">
-                            <a href="{{route('chambres.show', ['hotel' => $hotel, 'chambre' => $chambre])}}"><img src="{{Voyager::image($chambre->thumbnail('cropped', 'image'))}}" alt="{{$chambre->name}}"></a>
+                            <a href="{{route('appartements.show', ['appartement' => $appartement])}}"><img src="{{Voyager::image($appartement->thumbnail('cropped', 'image'))}}" alt="{{$appartement->name}}"></a>
                         </div>
                         <div class="text">
-                            <h2 class="heading">{{str_limit($chambre->name, 90)}}</h2>
-                            {!!$chambre->description!!}
-                            <div class="price"><span class="number">{{$chambre->prix}} </span><sub>FCFA/par jour</sub></div>
-                            {{-- <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub></div>
-                            <ul class="specs">
-                                <li><strong>Adults:</strong> 1</li>
-                                <li><strong>Categories:</strong> Single</li>
-                                <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone</li>
-                                <li><strong>Size:</strong> 20m<sup>2</sup></li>
-                                <li><strong>Bed Type:</strong> One bed</li>
-                            </ul> --}}
+                            <h2 class="heading">{{str_limit($appartement->name, 26)}}</h2>
+                            
+                            <div class="price"><span class="number">{{$appartement->prix}} </span><sub>FCFA/par semaine</sub></div>
+
                         </div>
                     </div>
                 </div>

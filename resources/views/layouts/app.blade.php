@@ -25,12 +25,12 @@
 <body>
 
     @includeIf('partials.navbar')
-    @if (\Request::is('/'))
+{{--     @if (\Request::is('/'))
         @includeIf('partials.barner')
     @else
         @includeIf('partials.barner2')
     @endif
-
+ --}}
 
     @yield('content')
 

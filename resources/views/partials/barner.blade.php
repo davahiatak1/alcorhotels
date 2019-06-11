@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-10">
-                        <span class="subheading-sm">Welcome</span>
+                        <span class="subheading-sm">Bienvenue</span>
                         <h2 class="heading">Profitez d'une expérience de luxe</h2>
                         <p><a href="{{route('hotels.index')}}" class="btn py-4 px-5 btn-primary">Voir Plus</a></p>
                     </div>
@@ -15,8 +15,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-10">
-                        <span class="subheading-sm">Welcome</span>
-                        <h2 class="heading">Simple &amp; Elegant</h2>
+                        <span class="subheading-sm">Bienvenue</span>
+                        <h2 class="heading">Nos Appartements son Simples &amp; Elegants</h2>
                         <p><a href="{{route('appartements.index')}}" class="btn py-4 px-5 btn-primary">Voir Plus</a></p>
                     </div>
                 </div>
@@ -26,9 +26,9 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-10">
-                        <span class="subheading-sm">Welcome</span>
-                        <h2 class="heading">Food &amp; Drinks</h2>
-                        <p><a href="#" class="btn py-4 px-5 btn-primary">Voir Plus</a></p>
+                        <span class="subheading-sm">Bienvenue</span>
+                        <h2 class="heading">Mangez et buvez Qualité !</h2>
+                        <p><a href="{{route('restaurant.index')}}" class="btn py-4 px-5 btn-primary">Voir Plus</a></p>
                     </div>
                 </div>
             </div>

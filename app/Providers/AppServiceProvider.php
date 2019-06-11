@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-       
+
     }
 
     /**
@@ -33,8 +33,12 @@ class AppServiceProvider extends ServiceProvider
 
         View::share([
             'alcor' => Alcor::all()->last(),
+            'overviewChambres' => ChambreHotel::all()->random()->take(6)->get(),
+            //'overviewChambres' => [],
+
+
             'about' => About::all()->last(),
-            //'newPosts' => Blog::all()->last(),
+            'newPosts' => Blog::all()->last(),
         ]);
 
     }

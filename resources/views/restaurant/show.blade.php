@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="block-30 block-30-sm item" style="background-image: url('images/bg_3.jpg'); min-height: 580px;" data-stellar-background-ratio="0.5">
+  <div class="block-30 block-30-sm item" style="background-image: url('{{asset('images/bg_3.jpg')}}'); min-height: 580px;" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-10">

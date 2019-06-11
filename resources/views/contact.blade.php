@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-@extends('layouts.app')
-
-@section('content')
+ <div class="block-30 block-30-sm item" style="background-image: url('images/bg_2.jpg'); min-height: 280px;" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-10">
+          <span class="subheading-sm">Contact </span>
+              <h2 class="heading">Posez nous vos questions</h2>
+        </div>
+      </div>
+    </div>
+  </div>
     <div class="site-section">
         <div class="container">
             @if (session('status'))
@@ -36,7 +43,7 @@
 
                 </div>
 
-                
+
             </div>
         </div>
     </div>

@@ -1,6 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+ <div class="block-30 block-30-sm item" style="background-image: url('images/bg_2.jpg'); min-height: 280px;" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-10">
+          <span class="subheading-sm">Hébergement </span>
+              <h2 class="heading">Des chambres d'hôtels luxeuses</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <div class="site-section bg-light">
 	<div class="container">
@@ -24,7 +35,7 @@
 						</div>
 
 
-					</div>  
+					</div>
 
 				@else
 					<div class="col-md-12 mb-5">
@@ -45,12 +56,12 @@
 
 					</div>
 				@endif
-			@endforeach  
- 
+			@endforeach
+
 
 		</div>
 	</div>
 </div>
-    
+
 
 @endsection

@@ -1,6 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+  <div class="block-30 block-30-sm item" style="background-image: url('images/bg_3.jpg'); min-height: 280px;" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-10">
+          <span class="subheading-sm">Restauration | Détails sur <b>{{$restaurant->nom}}</b></span>
+              <h2 class="heading">Nos Restaurants et leurs meilleurs Plats</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     {{-- <h2>restaurant -> plats</h2> --}}
 <br>
@@ -34,8 +45,8 @@
             <div class="block-34">
               <div class="image " style="text-align: center;">
                 {{-- <img src="{{Voyager::image($r->image)}}"/> --}}
-                <img src="{{Voyager::image($r->thumbnail('small'))}}" />
-                {{-- <a href="#"><img src="{{asset('images/menu_1.jpg')}}" alt="Image placeholder"></a> --}}
+                <img src="{{Voyager::image($r->thumbnail('medium'))}}"   />
+                {{-- <a href="#"><img src="{{asset('images/menu_1.jpg')}}" alt="Image placeholder"></a> style="height: 200px; width: 90%"--}}
               </div>
               <div class="text">
                 <h2 class="heading">{{$r->nom}}</h2>

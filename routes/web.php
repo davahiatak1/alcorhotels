@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('/');
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -31,7 +31,8 @@ Route::resource('/hotels', 'HotelController');
 
 Route::resource('/contacts', 'ContactController');
 
-Route::resource('/posts', 'PostController');
+Route::get('/blogs', 'BlogController@index')->name('blog.index');
+Route::get('/blogs/show/{id}', 'BlogController@show')->name('blog.show');
 
 Route::resource('/appartements', 'ResidenceController');
 

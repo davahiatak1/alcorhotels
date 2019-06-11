@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
+@includeIf('partials.barner')
     <div class="container">
-        <div class="row mb-5">
+{{--         <div class="row mb-5">
             <div class="col-md-12">
 
                 <div class="block-32">
@@ -58,7 +58,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="row site-section">
             <div class="col-md-12">
@@ -76,7 +76,7 @@
                         <h3 class="heading">Chambres de Luxe</h3>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
                     </div>
-                </div>      
+                </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="media block-6">
@@ -104,7 +104,7 @@
                         <h3 class="heading">Hebergement Voyage</h3>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
                     </div>
-                </div>      
+                </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="media block-6">

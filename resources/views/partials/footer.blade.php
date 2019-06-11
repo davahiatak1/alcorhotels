@@ -8,20 +8,20 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <h3 class="heading-section">Blog</h3>
-                {{-- @foreach($newPosts as $post)
+                @foreach($newPosts as $post)
                     <div class="block-21 d-flex mb-4">
                         <figure class="mr-3">
-                            <img src="images/img_1.jpg" alt="" class="img-fluid">
+                            <img src="{{Voyager::image($post->thumbnail('small', 'image'))}}" alt="" class="img-fluid">
                         </figure>
                         <div class="text">
-                            <h3 class="heading"><a href="#">{{$post->nom}}</a></h3>
+                            <h3 class="heading"><a href="#">{{$post->titre}}</a></h3>
                             <div class="meta">
                                 <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div>
                             </div>
                         </div>
                     </div>
                     @if($loop->iteration == 3) @break @endif
-                @endforeach --}}
+                @endforeach
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="block-23">

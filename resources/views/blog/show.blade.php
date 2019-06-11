@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
- <div class="block-30 block-30-sm item" style="background-image: url('images/bg_2.jpg'); min-height: 280px;" data-stellar-background-ratio="0.5">
+ <div class="block-30 block-30-sm item" style="background-image: url('images/bg_2.jpg'); min-height: 580px;" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-10">
@@ -20,8 +20,8 @@
       <div class="row">
 
         <div class="col-md-8">
-          <h2 class="mb-3"><u>{{$post->titre}}</u></h2>
-          <p><img src="{{Voyager::image($post->image)}}" alt="" class="img-fluid"></p>
+          <h2 class="mb-3">{{$post->titre}}</h2>
+          <p><img src="{{Voyager::image($post->thumbnail('cropped', 'image'))}}" alt="" class="img-fluid"></p>
           {!! $post->texte !!}
         </div>
 

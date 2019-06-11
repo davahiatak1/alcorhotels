@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\About;
 use App\Alcor;
+use App\Blog;
+use App\ChambreHotel;
 use App\Post;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
@@ -38,7 +40,7 @@ class AppServiceProvider extends ServiceProvider
 
 
             'about' => About::all()->last(),
-            'newPosts' => Blog::all()->last(),
+            'newPosts' => Blog::take(-3)->get(),
         ]);
 
     }

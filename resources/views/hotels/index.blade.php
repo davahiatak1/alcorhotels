@@ -14,9 +14,9 @@
 							<div class="image" style="background-image: url('{{Voyager::image($hotel->thumbnail('cropped', 'image'))}}'); "></div>
 							<div class="text">
 
-								<h2 class="heading">{{str_limit($hotel->name, 90)}}</h2>
+								<h2 class="heading">{{str_limit($hotel->name, 50)}}</h2>
 
-								{!! str_limit($hotel->description, 255)!!}
+								{!! str_limit($hotel->description, 135)!!}
 
 								<p><a href="{{route("hotels.show", $hotel)}}" class="btn btn-primary py-3 px-5">Voir Plus</a></p>
 

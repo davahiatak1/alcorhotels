@@ -47,7 +47,7 @@ class ChambreHotelController extends Controller
      */
     public function show(Hotel $hotel, ChambreHotel $chambre)
     {
-        $chambres = ChambreHotel::all()->where('id', '!=', $chambre->id)->where('hotel_id', $hotel);
+        $chambres = ChambreHotel::where('id', '!=', $chambre->id)->where('hotel_id', $hotel->id)->get();
 
         return view('chambre-hotels.show', [
             'hotel' => $hotel,

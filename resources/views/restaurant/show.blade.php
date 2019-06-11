@@ -38,20 +38,20 @@
     <br>
 
     <div class="row">
-    @foreach($plats as $r)
+    @foreach($plats as $r)    
       <div class="col-lg-4 block-13">
-
           <div class="item">
             <div class="block-34">
-              <div class="image " style="text-align: center;">
+              <div class="image ">
                 {{-- <img src="{{Voyager::image($r->image)}}"/> --}}
-                <img src="{{Voyager::image($r->thumbnail('medium'))}}"   />
-                {{-- <a href="#"><img src="{{asset('images/menu_1.jpg')}}" alt="Image placeholder"></a> style="height: 200px; width: 90%"--}}
+
+                <img src="{{Voyager::image($r->thumbnail('cropped'))}}" />
+                {{-- <a href="#"><img src="{{asset('images/menu_1.jpg')}}" alt="Image placeholder"></a> --}}
               </div>
               <div class="text">
-                <h2 class="heading">{{$r->nom}}</h2>
-                <p>{!!$r->description !!}</p>
-                <div class="price"><sup>Fcfa</sup><span class="number">{{$r->prix}}</span></div>
+                <h2 class="heading">{{ str_limit($r->nom, 35)}}</h2>
+                <p>{!! str_limit($r->description, 90) !!}</p>
+                <div class="price"><span class="number">{{$r->prix}}</span><sup>Fcfa</sup></div>
               </div>
             </div>
           </div>

@@ -2,29 +2,26 @@
 
 @section('content')
 
-
 <div class="site-section bg-light">
     <div class="container">
         <div class="row mt-2">
             <div class="col-md-12">
-
-                <div class="block-3 d-md-flex">
-                    <div class="image" style="background-image: url('{{Voyager::image($hotel->thumbnail('cropped', 'image'))}}'); "></div>
+                <div class="block-34">
+                    <div class="image">
+                        <a href="#"><img src="{{Voyager::image($hotel->thumbnail('detail', 'image'))}}"></a>
+                    </div>
                     <div class="text">
-
-                        <h2 class="heading">{{str_limit($hotel->name, 90)}}</h2>
-
-                        {!! str_limit($hotel->description, 255)!!}
+                        <h2 class="heading">{{$hotel->name}}</h2>
                         
-
+                         {!!$hotel->description!!}
                     </div>
                 </div>
-
-
-            </div>  
+            </div>
         </div>
     </div>
 </div>
+
+
 
 
 <div class="site-section bg-light p-0">
@@ -46,16 +43,27 @@
                         </div>
                         <div class="text">
                             <h2 class="heading">{{str_limit($chambre->name, 90)}}</h2>
-                            {!!$chambre->description!!}
-                            <div class="price"><span class="number">{{$chambre->prix}} </span><sub>FCFA/par jour</sub></div>
-                            {{-- <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub></div>
+                            
+                            <div class="price"><span class="number">{{$chambre->prix}} </span><sup>FCFA/par jour</sup></div>
+
                             <ul class="specs">
-                                <li><strong>Adults:</strong> 1</li>
-                                <li><strong>Categories:</strong> Single</li>
-                                <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone</li>
-                                <li><strong>Size:</strong> 20m<sup>2</sup></li>
-                                <li><strong>Bed Type:</strong> One bed</li>
-                            </ul> --}}
+                                <li><strong>Adults:</strong> {{$chambre->adulte}}</li>
+                                <li><strong>Categories:</strong> {{$chambre->categorie}}</li>
+                                <li><strong>Facilities:</strong> 
+                                    @php
+                                        $facilitie = str_replace_array('"', [' '], $chambre->facilitie);
+
+                                        $facilitie = str_replace_array('[', [' '], $facilitie);
+
+                                        $facilitie = str_replace_array('"]', [' '], $facilitie);
+
+                                        $facilitie = str_replace_array('","', [', '], $facilitie);
+                                    @endphp
+                                    {{$facilitie}}</li>
+                                <li><strong>Size:</strong> {{$chambre->size}}m<sup>2</sup></li>
+                                <li><strong>Bed Type:</strong> {{$chambre->bed}} bed</li>
+                            </ul>
+                            
                         </div>
                     </div>
                 </div>

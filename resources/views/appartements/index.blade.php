@@ -6,19 +6,21 @@
 	<div class="container">
 		<div class="row mb-5">
 
-			@foreach($hotels as $hotel)
+			@foreach($appartements as $appartement)
 				@if($loop->iteration%2)
 					<div class="col-md-12 mb-5">
 
 						<div class="block-3 d-md-flex">
-							<div class="image" style="background-image: url('{{Voyager::image($hotel->thumbnail('cropped', 'image'))}}'); "></div>
+							<div class="image" style="background-image: url('{{Voyager::image($appartement->thumbnail('cropped', 'image'))}}'); "></div>
 							<div class="text">
 
-								<h2 class="heading">{{str_limit($hotel->name, 90)}}</h2>
+								<h2 class="heading">{{str_limit($appartement->name, 90)}}</h2>
 
-								{!! str_limit($hotel->description, 255)!!}
+								<div class="price"><span class="number">{{$appartement->prix}} </span><sup>FCFA/par semaine</sup></div>
 
-								<p><a href="{{route("hotels.show", $hotel)}}" class="btn btn-primary py-3 px-5">Voir Plus</a></p>
+								{!! str_limit($appartement->description, 255)!!}
+
+								<p><a href="{{route("appartements.show", $appartement)}}" class="btn btn-primary py-3 px-5">Voir Plus</a></p>
 
 							</div>
 						</div>
@@ -30,14 +32,14 @@
 					<div class="col-md-12 mb-5">
 
 						<div class="block-3 d-md-flex">
-							<div class="image order-2" style="background-image: url('{{Voyager::image($hotel->thumbnail('cropped', 'image'))}}'); "></div>
+							<div class="image order-2" style="background-image: url('{{Voyager::image($appartement->thumbnail('cropped', 'image'))}}'); "></div>
 							<div class="text order-1">
 
-								<h2 class="heading">{{str_limit($hotel->name, 90)}}</h2>
+								<h2 class="heading">{{str_limit($appartement->name, 90)}}</h2>
 
-								{!! str_limit($hotel->description, 255)!!}
+								{!! str_limit($appartement->description, 255)!!}
 
-								<p><a href="{{route("hotels.show", $hotel)}}" class="btn btn-primary py-3 px-5">Voir Plus</a></p>
+								<p><a href="{{route("appartements.show", $appartement)}}" class="btn btn-primary py-3 px-5">Voir Plus</a></p>
 
 							</div>
 						</div>

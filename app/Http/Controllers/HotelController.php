@@ -49,7 +49,7 @@ class HotelController extends Controller
      */
     public function show(Hotel $hotel)
     {
-        $chambres = ChambreHotel::find($hotel);
+        $chambres = ChambreHotel::where('hotel_id', $hotel->id)->get();
 
         return view('hotels.show', [
             'chambres' => $chambres,

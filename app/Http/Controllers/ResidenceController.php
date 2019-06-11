@@ -14,7 +14,10 @@ class ResidenceController extends Controller
      */
     public function index()
     {
-        //
+        $appartements = Residence::all();
+        return view('appartements.index', [
+            'appartements' => $appartements
+        ]);
     }
 
     /**
@@ -44,9 +47,12 @@ class ResidenceController extends Controller
      * @param  \App\Residence  $residence
      * @return \Illuminate\Http\Response
      */
-    public function show(Residence $residence)
+    public function show(Residence $appartement)
     {
-        //
+        return view('appartements.show', [
+            'appartement' => $appartement,
+            'appartements' => Residence::where('id', '!=', $appartement->id)->get(),
+        ]);
     }
 
     /**

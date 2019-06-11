@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Alcor;
 use App\Contact;
+use App\Mail\ContactAndReserve;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -40,23 +42,23 @@ class ContactController extends Controller
         Contact::create($request->all());
         if (Alcor::all()->isNotEmpty()) {
             if(Alcor::all()->last()->mail1){
-                Mail::to(['email' => Alcor::all()->last()->mail1])->send(new ContactAndCommand($request->all()));
+                Mail::to(['email' => Alcor::all()->last()->mail1])->send(new ContactAndReserve($request->all()));
             }        
 
             if(Alcor::all()->last()->mail2){
-                Mail::to(['email' => Alcor::all()->last()->mail2])->send(new ContactAndCommand($request->all()));
+                Mail::to(['email' => Alcor::all()->last()->mail2])->send(new ContactAndReserve($request->all()));
             }
 
             if(Alcor::all()->last()->mail3){
-                Mail::to(['email' => Alcor::all()->last()->mail1])->send(new ContactAndCommand($request->all()));
+                Mail::to(['email' => Alcor::all()->last()->mail1])->send(new ContactAndReserve($request->all()));
             }        
 
             if(Alcor::all()->last()->mail4){
-                Mail::to(['email' => Alcor::all()->last()->mail2])->send(new ContactAndCommand($request->all()));
+                Mail::to(['email' => Alcor::all()->last()->mail2])->send(new ContactAndReserve($request->all()));
             }
 
             if(Alcor::all()->last()->mail5){
-                Mail::to(['email' => Alcor::all()->last()->mail1])->send(new ContactAndCommand($request->all()));
+                Mail::to(['email' => Alcor::all()->last()->mail1])->send(new ContactAndReserve($request->all()));
             } 
         }
                

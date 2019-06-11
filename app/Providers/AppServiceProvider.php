@@ -35,8 +35,8 @@ class AppServiceProvider extends ServiceProvider
 
         View::share([
             'alcor' => Alcor::all()->last(),
-            'overviewChambres' => ChambreHotel::all()->random()->take(6)->get(),
-            //'overviewChambres' => [],
+            //'overviewChambres' => ChambreHotel::all()->random()->take(6)->get(),
+            'overviewChambres' => [],
 
 
             'about' => About::all()->last(),

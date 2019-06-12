@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\ChambreHotel;
+use App\Hotel;
 use App\Plat;
 use App\Residence;
+use App\Restaurant;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,16 +28,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $overviewChambres = (ChambreHotel::all()->count() >=5)? ChambreHotel::all()->random(5) : ChambreHotel::take(-5)->get();
 
-        $overviewAppartements = (Residence::all()->count() >= 4)? Residence::all()->random(4): Residence::take(-4)->get();
+        $appartements = (Residence::all()->count() >= 4)? Residence::all()->random(4): Residence::take(-4)->get();
 
-        $overviewPlats = (Plat::all()->count() >= 9)? Plat::all()->random(9) : Plat::take(-4)->get();
+        $restaurants = (Restaurant::all()->count() >= 9)? Restaurant::all()->random(9) : Restaurant::take(-4)->get();
+
+        $hotels = (Hotel::all()->count() >= 9)? Hotel::all()->random(9) : Hotel::take(-4)->get();
 
         return view('welcome', [
-            'overviewChambres' => $overviewChambres,
-            'overviewAppartements' => $overviewAppartements,
-            'overviewPlats' => $overviewPlats,
+            'appartements' => $appartements,
+            'restaurants' => $restaurants,
+            'hotels' => $hotels,
         ]);
     }
 }

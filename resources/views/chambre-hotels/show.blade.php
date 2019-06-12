@@ -25,9 +25,9 @@
                         <h2 class="heading">{{str_limit($chambre->name, 90)}}</h2>
                         <div class="price"><span class="number">{{$chambre->prix}} </span><sup>FCFA/par jour</sup></div>
                         <ul class="specs">
-                            <li><strong>Adults:</strong> {{$chambre->adulte}}</li>
-                            <li><strong>Categories:</strong> {{$chambre->categorie}}</li>
-                            <li><strong>Facilities:</strong>
+                            <li><strong>Nbre Adultes:</strong> {{$chambre->adulte}}</li>
+                            <li><strong>Types:</strong> {{$chambre->categorie}}</li>
+                            <li><strong>Assecoires:</strong>
                             @php
                                 $facilitie = str_replace_array('"', [' ',], $chambre->facilitie);
 
@@ -38,8 +38,8 @@
                                 $facilitie = str_replace_array('","', [', ',], $facilitie);
                             @endphp
                              {{$facilitie}}</li>
-                            <li><strong>Size:</strong> {{$chambre->size}}m<sup>2</sup></li>
-                            <li><strong>Bed Type:</strong> {{$chambre->bed}} bed</li>
+                            <li><strong>Superficie:</strong> {{$chambre->size}}m<sup>2</sup></li>
+                            <li><strong>Nbre de lits:</strong> {{$chambre->bed}} </li>
                         </ul>
                         <p><a href="#" class="btn btn-primary py-3 px-5 reserve-modal" data-image="{{Voyager::image($chambre->thumbnail('medium', 'image'))}}" data-name="{{$chambre->name}}" data-prix="{{$chambre->prix}}">Reserver</a></p>
                          {!!$chambre->description!!}

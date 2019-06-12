@@ -16,7 +16,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-10">
                         <span class="subheading-sm">Bienvenue</span>
-                        <h2 class="heading">Nos Appartements son Simples &amp; Elegants</h2>
+                        <h2 class="heading">Nos Appartements sont Elégants</h2>
                         <p><a href="{{route('appartements.index')}}" class="btn py-4 px-5 btn-primary">Voir Plus</a></p>
                     </div>
                 </div>

@@ -4,7 +4,7 @@
             <div class="col-md-6 col-lg-4">
                 <h3 class="heading-section">A propos</h3>
                 <p class="mb-5"> {!!str_limit($about->texte1, 230)!!} </p>
-                <p><a href="{{route('about.index')}}" class="btn btn-primary px-4">Button</a></p>
+                <p><a href="{{route('about.index')}}" class="btn btn-primary px-4">Lire Plus</a></p>
             </div>
             <div class="col-md-6 col-lg-4">
                 <h3 class="heading-section">Blog</h3>
@@ -16,7 +16,7 @@
                         <div class="text">
                             <h3 class="heading"><a href="#">{{$post->titre}}</a></h3>
                             <div class="meta">
-                                <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div>
+                                <div><a href="#"><span class="icon-calendar"></span> {{$post->created_at->diffForHumans()}}</a></div>
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
         <div class="row pt-5">
             <div class="col-md-12 text-left">
                 <p>
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+                    Copyright Dav & Benji &copy;<script>document.write(new Date().getFullYear());</script> Tous Droits Réservés 
                 </p>
             </div>
         </div>

@@ -9,8 +9,8 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item {{set_active_route('/')}}"><a href="/" class="nav-link">Accueil</a></li>
                 <li class="nav-item {{set_active_route('hotels.index')}}" ><a href="{{route('hotels.index')}}" class="nav-link">Hôtels</a></li>
-                <li class="nav-item {{set_active_route('appartements.index')}}" ><a href="{{route('appartements.index')}}" class="nav-link">Résidences</a></li>
-                <li class="nav-item {{set_active_route('restaurant.index')}} {{set_active_route('restaurant.show')}}" ><a href="{{route('restaurant.index')}}" class="nav-link">Appartements</a></li>
+                <li class="nav-item {{set_active_route('appartements.index')}}" ><a href="{{route('appartements.index')}}" class="nav-link">Appartements</a></li>
+                <li class="nav-item {{set_active_route('restaurant.index')}} {{set_active_route('restaurant.show')}}" ><a href="{{route('restaurant.index')}}" class="nav-link">Restaurant</a></li>
 
                 <li class="nav-item {{set_active_route('blog.index')}}{{set_active_route('blog.show')}}" ><a href="/blogs" class="nav-link">Actualités</a></li>
                 <li class="nav-item {{set_active_route('about.index')}}" ><a href="{{route('about.index')}}" class="nav-link">A propos</a></li>

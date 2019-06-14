@@ -1,6 +1,21 @@
 # alcorhotels
 
-## Initialisation
+## Initialisation 1
+
+ou cloner le projet `git https://github.com/davahiatak1/alcorhotels.git` et importer la base de données en utilisant le fichier sql se trouvant dans le dossier `database`
+
+
+Ensuite créer un nouvel utilisateur administrateur avec cette commande :
+
+    php artisan voyager:admin your@email.com --create
+
+
+puis cette commande pour créer un lien symbolique pour rendre accessible les fichiers uploader
+
+    php artisan voyager:admin your@email.com --create
+
+
+## Initialisation 2
 
 Pour initialiser le projet tapé les commandes suivantes :
 
@@ -23,3 +38,5 @@ Puis taper la commande suivante :
 Créer un nouvel utilisateur administrateur comme suit :
 
     php artisan voyager:admin your@email.com --create
+
+

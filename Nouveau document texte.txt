@@ -1,5 +1,0 @@
-<?php
-
-    symlink('/home/easyvoit/public_htmml/demoalcorhotels/storage/app/public', '/home/easyvoit/public_htmml/demoalcorhotels/public/storage');
-
-?>

@@ -2,7 +2,7 @@
 
 ## Initialisation 1
 
-ou cloner le projet `git https://github.com/davahiatak1/alcorhotels.git` et importer la base de données en utilisant le fichier sql se trouvant dans le dossier `database`
+Cloner le projet `git clone https://github.com/davahiatak1/alcorhotels.git` et importer la base de données en utilisant le fichier sql se trouvant dans le dossier `database`
 
 
 Ensuite créer un nouvel utilisateur administrateur avec cette commande :
